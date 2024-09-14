@@ -11,12 +11,12 @@ from email.mime.application import MIMEApplication
 
 
 subject = "Status Update"
-body = "Today status: "
+body = "Today's Status: "
 
 #To load environment variable
 load_dotenv()
 
-
+#Creates the container for an email message to hold
 message = MIMEMultipart()
 message['Subject'] = subject
 message['From'] =  os.environ.get('sender_email')
